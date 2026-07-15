@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vandreture · Sølvkysten 2026</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css"/>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<nav class="nav"><div class="inner">
+  <a class="brand" href="index.html">Sølvkysten <span>2026</span></a>
+  <div class="links">
+    <a href="index.html">Hjem</a>
+    <a href="itinerary.html">Rejseplan</a>
+    <a href="nazare.html">Nazaré</a>
+    <a href="wingfoil.html">Wingfoiling</a>
+    <a href="shopping.html">Shopping</a>
+    <a href="vandreture.html" class="active">Vandreture</a>
+  </div>
+</div></nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="kicker">Guide · bjerge &amp; kystvandringer</div>
+    <h1>Vandreture på Sølvkysten</h1>
+    <p class="sub">Et par rigtige små bjerge inde i landet og dramatiske klippevandringer lige uden for døren — fra korte formiddagsture til en hel vandredag.</p>
+    <div class="meta">
+      <span class="chip">Bjerge inde i landet</span>
+      <span class="chip">Klipper ved kysten</span>
+      <span class="chip">Kort &amp; lange ture</span>
+    </div>
+  </div>
+  <svg class="waves" viewBox="0 0 1200 64" preserveAspectRatio="none"><path d="M0,36 C150,64 350,10 600,36 C850,64 1050,10 1200,36 L1200,64 L0,64 Z" fill="#f6efe2"></path></svg>
+</header>
+
+<div class="wrap">
+
+  <section>
+    <p class="lead">Selve kysten er flad, men to steder inde i landet har rigtige kalkstensbjerge med udsigt, og halvøen ved Peniche har nogle af regionens flotteste klippegange — de fleste under 15 minutters kørsel fra villaen.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">1</span> Bjerge inde i landet</h2>
+    <div class="sights">
+      <div class="sight">
+        <span class="tag">~45 min · knap 700 m</span>
+        <h4>Serra de Montejunto</h4>
+        <p>Det nærmeste “rigtige” bjerg — en kalkstensryg der topper i 666 m (Pico do Montejunto) med vidt udsyn over hele regionen. Den klassiske tur er <em>Rota dos Moinhos</em> (møllernes rute), ca. 10 km / omkring 3 timer forbi gamle vindmøller. Flere kortere rundture på 8–8,5 km. Rig natur med ~400 plantearter og 75 ynglende fuglearter.</p>
+      </div>
+      <div class="sight">
+        <span class="tag">~55 min · naturpark</span>
+        <h4>Serras de Aire e Candeeiros</h4>
+        <p>Større og vildere — kalkstensbjerge op til knap 700 m, karstlandskab, huler og stengærder, en af Portugals største naturparker. Den mest kendte vandring er <em>PR5 – Rota dos Frades</em> (munkenes rute), ca. 11 km / godt 3 timer. God til en hel vandredag.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="num">2</span> Kystvandringer tæt på</h2>
+    <div class="sights">
+      <div class="sight">
+        <span class="tag">~10 min · ~4,3 km · let</span>
+        <h4>Papôa-halvøen, Peniche</h4>
+        <p>En kort, dramatisk rundtur langs vilde klipper ude på nordspidsen af Peniche. Perfekt til en formiddag — udsigt, klippeformationer og gamle skibsvrag-historier.</p>
+      </div>
+      <div class="sight">
+        <span class="tag">~12 min · ~8,5 km · middel</span>
+        <h4>Cabo Carvoeiro-klipperne</h4>
+        <p>Større rundtur langs de forrevne klipper rundt om Peniche-halvøen med Atlanterhavsudsigt, fyrtårnet og Berlengas i horisonten. Kombinér med solnedgang ved Nau dos Corvos.</p>
+      </div>
+      <div class="sight">
+        <span class="tag">~5 min · kort · let</span>
+        <h4>Baleal — strand og klinter</h4>
+        <p>Lige ved jer: gå nordpå langs stranden mod Praia da Almagreira og tilbage oppe på klinterne. Fleksibel længde, fladt og familievenligt.</p>
+      </div>
+      <div class="sight">
+        <span class="tag">~30 min · fladt</span>
+        <h4>Óbidos-lagunen &amp; Foz do Arelho</h4>
+        <p>Rolige, flade gåture langs lagunen og ud til havstranden. Godt at kombinere med en dovendag eller wingfoil-session i lagunen.</p>
+      </div>
+    </div>
+    <div class="callout"><strong>Bonus på klippen.</strong> I Nazaré er der korte, spektakulære kliffegange oppe i Sítio omkring fortet og udsigtspunkterne — nemt at flette ind i jeres Nazaré-dag.</div>
+  </section>
+
+  <section>
+    <h2><span class="num">3</span> Kort</h2>
+    <p style="color:var(--grey);">Klik på et mærke for længde, sværhedsgrad og et link, der åbner det i Google Maps.</p>
+    <div class="maplegend">
+      <span><i class="dot" style="background:#8a5a2b"></i> Bjerg / inde i landet</span>
+      <span><i class="dot" style="background:var(--sea)"></i> Kystvandring</span>
+      <span><i class="dot" style="background:var(--villa)"></i> Jeres base</span>
+    </div>
+    <div id="map"></div>
+  </section>
+
+  <section>
+    <h2><span class="num">4</span> Ruteoversigt</h2>
+    <table>
+      <thead><tr><th>Rute</th><th>Afstand fra villa</th><th>Længde / sværhedsgrad</th></tr></thead>
+      <tbody>
+        <tr><td class="sp">Serra de Montejunto — Rota dos Moinhos</td><td>~45 min</td><td>~10 km · middel · bjerg (666 m)</td></tr>
+        <tr><td class="sp">Serras de Aire e Candeeiros — PR5 Rota dos Frades</td><td>~55 min</td><td>~11 km · middel · naturpark</td></tr>
+        <tr><td class="sp">Papôa-halvøen</td><td>~10 min</td><td>~4,3 km · let · klipper</td></tr>
+        <tr><td class="sp">Cabo Carvoeiro-klipperne</td><td>~12 min</td><td>~8,5 km · middel · klipper</td></tr>
+        <tr><td class="sp">Baleal — strand og klinter</td><td>~5 min</td><td>Fleksibel · let · flad</td></tr>
+        <tr><td class="sp">Óbidos-lagunen / Foz do Arelho</td><td>~30 min</td><td>Fleksibel · let · flad</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2><span class="num">5</span> Godt at vide</h2>
+    <div class="facts">
+      <div class="fact"><div class="lbl">Fodtøj</div><div class="val">Vandresko til bjergene (kalksten kan være skarp og glat); gode sneakers er nok til kystturene.</div></div>
+      <div class="fact"><div class="lbl">Varme og vand</div><div class="val">Gå tidligt om morgenen i juli — der er lidt skygge på bjergene. Tag rigeligt vand og solhat med.</div></div>
+      <div class="fact"><div class="lbl">Klipper</div><div class="val">Hold god afstand til kanterne ved Papôa og Cabo Carvoeiro — ingen rækværk, og vinden kan være kraftig.</div></div>
+      <div class="fact"><div class="lbl">Apps</div><div class="val">Ruterne findes med GPS-spor på Komoot og AllTrails — hent dem hjem inden I kører, da signalet kan være svagt i bjergene.</div></div>
+    </div>
+  </section>
+
+</div>
+
+<footer><div class="wrap">
+  <h3>Kilder</h3>
+  <div class="src">
+    <a href="https://www.komoot.com/guide/3276058/hiking-in-paisagem-protegida-da-serra-de-montejunto" target="_blank">Komoot — Serra de Montejunto</a><br>
+    <a href="https://www.alltrails.com/parks/portugal/center-region--2/parque-natural-das-serras-de-aire-e-candeeiros" target="_blank">AllTrails — Serras de Aire e Candeeiros</a><br>
+    <a href="https://www.komoot.com/guide/897586/hiking-around-peniche" target="_blank">Komoot — vandreture ved Peniche (Papôa, Cabo Carvoeiro)</a><br>
+    <a href="https://silvercoastwalks.com/baleal-beach-n-bluffs/" target="_blank">Silver Coast Walks — Baleal</a>
+  </div>
+  <p class="madeline">Hjem · Rejseplan · Nazaré · Wingfoiling · Shopping · Vandreture</p>
+</div></footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script>
+(function(){
+  var map=L.map('map',{scrollWheelZoom:false}).setView([39.42,-9.15],10);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'&copy; OpenStreetMap-bidragydere'}).addTo(map);
+  var MTN='#8a5a2b',SEA='#1d6fa5',VILLA='#2e8b57';
+  var LBL={mtn:'Bjerg / inde i landet',coast:'Kystvandring',villa:'Jeres base'};
+  var COL={mtn:MTN,coast:SEA,villa:VILLA};
+  function icon(c){return L.divIcon({className:'',html:'<div style="width:19px;height:19px;border-radius:50%;background:'+c+';border:3px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.45);"></div>',iconSize:[19,19],iconAnchor:[9.5,9.5],popupAnchor:[0,-9]});}
+  function g(lat,lng){return 'https://www.google.com/maps/search/?api=1&query='+lat+','+lng;}
+  var spots=[
+    {lat:39.3489,lng:-9.3297,t:'villa',name:'Jeres base — Atouguia da Baleia',desc:'Udgangspunkt for alle turene.'},
+    {lat:39.1736,lng:-9.0500,t:'mtn',name:'Serra de Montejunto',desc:'Kalkstensbjerg, top 666 m. Rota dos Moinhos ~10 km / ~3 t. ~45 min. kørsel.'},
+    {lat:39.5333,lng:-8.9167,t:'mtn',name:'Serras de Aire e Candeeiros',desc:'Naturpark, bjerge op til knap 700 m. PR5 Rota dos Frades ~11 km / ~3 t. ~55 min. kørsel.'},
+    {lat:39.3667,lng:-9.3760,t:'coast',name:'Papôa-halvøen, Peniche',desc:'Kort, dramatisk klipperundtur ~4,3 km · let. ~10 min. kørsel.'},
+    {lat:39.3558,lng:-9.4030,t:'coast',name:'Cabo Carvoeiro-klipperne',desc:'Klipperundtur om halvøen ~8,5 km · middel. Fyrtårn og Berlengas-udsigt. ~12 min.'},
+    {lat:39.3725,lng:-9.3335,t:'coast',name:'Baleal — strand og klinter',desc:'Let, fleksibel rundtur langs strand og klinter. ~5 min. kørsel.'},
+    {lat:39.4300,lng:-9.2200,t:'coast',name:'Óbidos-lagunen / Foz do Arelho',desc:'Flade, rolige gåture langs lagunen og til havstranden. ~30 min.'},
+    {lat:39.6060,lng:-9.0820,t:'coast',name:'Sítio-klipperne, Nazaré',desc:'Korte, spektakulære kliffegange ved fortet. Flet ind i Nazaré-dagen.'}
+  ];
+  var p=[];
+  spots.forEach(function(s){var m=L.marker([s.lat,s.lng],{icon:icon(COL[s.t])}).addTo(map);m.bindPopup('<b>'+s.name+'</b><br><span class="wind" style="background:'+COL[s.t]+'">'+LBL[s.t]+'</span><br>'+s.desc+'<br><a href="'+g(s.lat,s.lng)+'" target="_blank">Åbn i Google Maps &rarr;</a>');p.push([s.lat,s.lng]);});
+  map.fitBounds(p,{padding:[45,45]});
+  map.on('click',function(){map.scrollWheelZoom.enable();});
+})();
+</script>
+
+</body>
+</html>
