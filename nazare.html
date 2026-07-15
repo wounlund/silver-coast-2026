@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Day in Nazaré · Silver Coast 2026</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css"/>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<nav class="nav"><div class="inner">
+  <a class="brand" href="index.html">Silver Coast <span>2026</span></a>
+  <div class="links">
+    <a href="index.html">Home</a>
+    <a href="itinerary.html">Itinerary</a>
+    <a href="nazare.html" class="active">Nazaré</a>
+    <a href="wingfoil.html">Wing Foiling</a>
+  </div>
+</div></nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="kicker">Day Trip · ~1 hour from the villa</div>
+    <h1>A Day in Nazaré</h1>
+    <p class="sub">A medieval pilgrimage town, a living fishing village, and the home of the biggest waves ever surfed — all in one clifftop-and-beach day.</p>
+    <div class="meta">
+      <span class="chip">Full day</span>
+      <span class="chip">Beach + old town</span>
+      <span class="chip">Family friendly</span>
+    </div>
+  </div>
+  <svg class="waves" viewBox="0 0 1200 64" preserveAspectRatio="none"><path d="M0,36 C150,64 350,10 600,36 C850,64 1050,10 1200,36 L1200,64 L0,64 Z" fill="#f6efe2"></path></svg>
+</header>
+
+<div class="wrap">
+
+  <section>
+    <p class="lead">Nazaré makes the most sense as three towns layered on one cliff. Spend the morning by the beach, ride the historic funicular up to the old town, and let the giant-wave lookout be the finale.</p>
+    <div class="layers">
+      <div class="layer"><h4>A pilgrimage town</h4><p>Sacred since the 12th century, built around the legend of Our Lady of Nazaré and a knight saved at the cliff's edge.</p></div>
+      <div class="layer"><h4>A fishing village</h4><p>Fish still dry in the sun on the sand, and older women wear the traditional seven skirts.</p></div>
+      <div class="layer"><h4>Big-wave capital</h4><p>An underwater canyon funnels Atlantic swells into record waves each winter. In July the sea is calm — the drama lives at the viewpoints.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="num">1</span> The legend</h2>
+    <p>The story dates to <strong>1182</strong>: the knight Dom Fuas Roupinho, chasing a deer in thick fog, nearly rode off the cliff — he called out to Our Lady of Nazaré and his horse stopped dead at the brink while the deer plunged into the sea. A chapel, the <em>Ermida da Memória</em>, marks the spot; in <strong>1377</strong> King Fernando I founded the sanctuary that still crowns the cliff. The big pilgrimage falls on 8 September.</p>
+    <div class="callout"><strong>The seven skirts.</strong> The most-loved explanation: fishermen's wives counted the waves — seven for the sea to calm enough to land a boat — while waiting on the shore. Others say the seven days, the seven virtues, or the rainbow's colours.</div>
+  </section>
+
+  <section>
+    <h2><span class="num">2</span> How to spend the day</h2>
+    <div class="timeline">
+      <div class="stop"><div class="time">Morning · Praia</div><h4>Beach &amp; old fishing quarter</h4><p>Start on the long, sheltered beach — calm and swimmable in summer. Wander the cobbled lanes, catch the drying-fish tradition (an open-air exhibit), and the market with fishermen's wives in traditional dress.</p></div>
+      <div class="stop"><div class="time">Late morning · The ride up</div><h4>The historic funicular</h4><p>Take the funicular to Sítio, the clifftop old town. It opened in 1889 and was designed by a disciple of Gustave Eiffel.</p></div>
+      <div class="stop"><div class="time">Midday · Sítio</div><h4>Viewpoint, sanctuary &amp; lunch</h4><p>The Miradouro do Suberco for the postcard view, the sanctuary and legend-chapel, then grilled sardines at a Sítio tavern.</p></div>
+      <div class="stop"><div class="time">Afternoon · The waves</div><h4>Fort, lighthouse &amp; Praia do Norte</h4><p>The fort and red lighthouse over Praia do Norte, where the record waves break, with a small exhibition. A steep 10-min trail drops to the beach and sea caves.</p></div>
+      <div class="stop"><div class="time">Late afternoon</div><h4>Back to the sand</h4><p>A last swim on Praia da Nazaré before the easy hour's drive home.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="num">3</span> Map of the day</h2>
+    <p style="color:var(--grey);">Click any marker for details and a one-tap link to open directions in Google Maps.</p>
+    <div class="maplegend">
+      <span><i class="dot" style="background:var(--villa)"></i> Your villa</span>
+      <span><i class="dot" style="background:var(--coral)"></i> Sights &amp; stops</span>
+      <span><i class="dot" style="background:var(--gold)"></i> Places to eat</span>
+    </div>
+    <div id="map"></div>
+    <a class="directbtn" href="https://www.google.com/maps/dir/Atouguia+da+Baleia/Nazar%C3%A9,+Portugal" target="_blank">Open villa → Nazaré directions</a>
+  </section>
+
+  <section>
+    <h2><span class="num">4</span> Up top: what to see in Sítio</h2>
+    <div class="sights">
+      <div class="sight"><span class="tag">The postcard</span><h4>Miradouro do Suberco</h4><p>A clifftop viewpoint ~110 m above the sea, steps from the funicular.</p></div>
+      <div class="sight"><span class="tag">Faith &amp; legend</span><h4>Sanctuary of Nossa Senhora</h4><p>The 14th-century pilgrimage church and the tiny Ermida da Memória by the cliff.</p></div>
+      <div class="sight"><span class="tag">History &amp; views</span><h4>Fort of São Miguel Arcanjo</h4><p>Built 1577 against pirates; the red lighthouse (1903) sits on top. Prime big-wave lookout.</p></div>
+      <div class="sight"><span class="tag">For the teens</span><h4>Praia do Norte &amp; caves</h4><p>Steep 10-min trail to the wild north beach and its sea caves. Look, don't swim — serious currents.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="num">5</span> The famous waves</h2>
+    <div class="wavefact">
+      <div class="big">80–100<span> feet</span></div>
+      <p>The record-breaking winter waves at Praia do Norte. A deep underwater canyon channels and amplifies Atlantic swells here. In July the sea is flat and safe, so you enjoy the story from the fort.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="num">6</span> Where to eat</h2>
+    <div class="eat">
+      <div class="row"><span class="name">Casa Pires — A Sardinha</span><span class="desc">Local favourite for grilled sardines, near the sanctuary. Great value.</span><span class="where">Sítio</span></div>
+      <div class="row"><span class="name">Taberna d'Adélia</span><span class="desc">Michelin-listed fresh fish and seafood for one special meal.</span><span class="where">Beachfront</span></div>
+      <div class="row"><span class="name">Beachfront tascas</span><span class="desc">Plenty of fresh-catch seafood along Praia da Nazaré.</span><span class="where">Praia</span></div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="num">7</span> Good to know</h2>
+    <div class="facts">
+      <div class="fact"><div class="lbl">Getting there</div><div class="val">~1 hour drive north from Atouguia da Baleia / Peniche.</div></div>
+      <div class="fact"><div class="lbl">Funicular</div><div class="val">Links the beach (Praia) to the clifftop old town (Sítio).</div></div>
+      <div class="fact"><div class="lbl">Swimming</div><div class="val">Praia da Nazaré is calm and family-friendly. Avoid Praia do Norte.</div></div>
+      <div class="fact"><div class="lbl">Bring</div><div class="val">Sun protection, swimwear, comfy shoes for cobbles and the cliff trail, a light layer up top.</div></div>
+    </div>
+  </section>
+
+</div>
+
+<footer><div class="wrap">
+  <h3>Sources &amp; further reading</h3>
+  <div class="src">
+    <a href="https://nazarewaves.com/en/Home/InfoForTourists" target="_blank">Nazaré tourist info &amp; big-wave guide</a><br>
+    <a href="https://www.earthtrekkers.com/things-to-do-in-nazare-portugal/" target="_blank">Earth Trekkers — Things to do in Nazaré</a><br>
+    <a href="https://www.nazareportugaltourism.com/guide/miradouro-do-suberco.html" target="_blank">Miradouro do Suberco viewpoint guide</a><br>
+    <a href="https://www.ricksteves.com/watch-read-listen/read/articles/nazare-a-beach-town-with-traditions" target="_blank">Rick Steves — Nazaré's traditions</a>
+  </div>
+  <p class="madeline">Home · Itinerary · Nazaré · Wing Foiling</p>
+</div></footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script>
+(function(){
+  var map = L.map('map', {scrollWheelZoom:false}).setView([39.602, -9.078], 14);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {maxZoom:19, attribution:'&copy; OpenStreetMap contributors'}).addTo(map);
+  function icon(c){return L.divIcon({className:'',html:'<div style="width:20px;height:20px;border-radius:50%;background:'+c+';border:3px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.4);"></div>',iconSize:[20,20],iconAnchor:[10,10],popupAnchor:[0,-10]});}
+  var CORAL='#d9642c',GOLD='#c9971f',GREEN='#2e8b57';
+  function g(lat,lng){return 'https://www.google.com/maps/search/?api=1&query='+lat+','+lng;}
+  var stops=[
+    {lat:39.3489,lng:-9.3297,c:GREEN,name:'Your villa — Atouguia da Baleia',desc:'Starting point. About a 1-hour drive north to Nazaré.'},
+    {lat:39.6017,lng:-9.0710,c:CORAL,name:'Praia da Nazaré (town beach)',desc:'Long, calm, family-friendly beach. Start and end here.'},
+    {lat:39.5990,lng:-9.0723,c:CORAL,name:'Funicular — lower station',desc:'Historic 1889 funicular up to the clifftop old town.'},
+    {lat:39.6046,lng:-9.0806,c:CORAL,name:'Miradouro do Suberco',desc:'Clifftop viewpoint ~110m up — the postcard view.'},
+    {lat:39.6053,lng:-9.0791,c:CORAL,name:'Sanctuary of Nossa Senhora',desc:'14th-century pilgrimage church and legend-chapel.'},
+    {lat:39.6079,lng:-9.0868,c:CORAL,name:'Fort of São Miguel Arcanjo & lighthouse',desc:'Best lookout over the big-wave beach.'},
+    {lat:39.6118,lng:-9.0876,c:CORAL,name:'Praia do Norte (big waves)',desc:'Where the record waves break. Do not swim.'},
+    {lat:39.6055,lng:-9.0796,c:GOLD,name:'Casa Pires — A Sardinha',desc:'Grilled sardines near the sanctuary. Great value.'},
+    {lat:39.6011,lng:-9.0698,c:GOLD,name:'Taberna d’Adélia',desc:'Michelin-listed fresh fish and seafood.'}
+  ];
+  var b=[];
+  stops.forEach(function(s){var m=L.marker([s.lat,s.lng],{icon:icon(s.c)}).addTo(map);m.bindPopup('<b>'+s.name+'</b><br>'+s.desc+'<br><a href="'+g(s.lat,s.lng)+'" target="_blank">Open in Google Maps &rarr;</a>');b.push([s.lat,s.lng]);});
+  map.fitBounds(b.slice(1),{padding:[40,40]});
+  map.on('click',function(){map.scrollWheelZoom.enable();});
+})();
+</script>
+
+</body>
+</html>
